@@ -21,6 +21,11 @@ app.use('/api/admin', require('./routes/admin'));
 app.use('/api/user', require('./routes/user'));
 app.use('/api/surveys', require('./routes/surveyRoutes')); 
 
+app.get("/", (req, res) => {
+  res.send("Backend running successfully");
+});
+
+
 
 const PORT = process.env.PORT || 5002;
 app.listen(PORT, () => {
